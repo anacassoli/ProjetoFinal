@@ -4,16 +4,20 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+/*remoção de margens e espaçamentos automáticos*/
+
+html,
+body {
+  height: 100%;
+} /* Define que o HTML e o body ocupem toda a altura da janela do navegador */
 
 body {
-  min-height: 100vh;
+  height: 100%;  /* Garante que o conteúdo da página tenha no mínimo a altura total da tela */
   background-color: #e8f5e9;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
 }
 
@@ -22,12 +26,12 @@ header {
   text-align: center;
   margin-bottom: 20px;
   color: #1b5e20;
-}
+} /* Centraliza os textos do cabeçalho e adiciona um espaçamento embaixo */
 
 header h1 {
   font-size: 32px;
   margin-bottom: 5px;
-}
+} /* Define o tamanho do título principal e um pequeno espaçamento inferior */
 
 header p {
   font-size: 14px;
@@ -39,43 +43,39 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-}
+} /*deixa o painel de login na horizontal*/
 
 /* CARD */
 .panel {
   width: 100%;
   max-width: 400px;
-
   background: white;
-
   padding: 30px;
-
   border-radius: 12px;
   border: 2px solid #81c784;
-
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+} /* Cria um cartão branco com bordas arredondadas e sombra para destacar o formulário */
 
 /* LOGIN TITLE */
 .login-panel h2 {
   text-align: center;
   margin-bottom: 20px;
   color: #2e7d32;
-}
+} /* Centraliza e estiliza o título da área de login */
 
 /* CAMPOS */
 .form-row {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-}
+} /* Organiza cada campo do formulário em formato de coluna */
 
 .form-row label {
   margin-bottom: 5px;
   color: #1b5e20;
   font-weight: bold;
-}
-
+} /* Destaca os nomes dos campos usando negrito */
+ 
 .form-row input {
   padding: 12px;
   border: 1px solid #a5d6a7;
@@ -83,25 +83,17 @@ main {
   font-size: 14px;
 }
 
-.form-row input:focus {
-  outline: none;
-  border-color: #43a047;
-}
-
 /* BOTÃO */
 .button-row button {
   width: 100%;
   padding: 12px;
-
   background-color: #43a047;
   color: white;
-
   border: none;
   border-radius: 8px;
-
   font-size: 15px;
   cursor: pointer;
-}
+} /* Configura o botão principal do formulário */
 
 .button-row button:hover {
   background-color: #2e7d32;
@@ -112,4 +104,4 @@ main {
   text-align: center;
   color: red;
   margin-bottom: 15px;
-}
+} /* Área destinada à exibição de mensagens de erro ou aviso */

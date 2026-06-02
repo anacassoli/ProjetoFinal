@@ -34,7 +34,7 @@ async function handleLogin(event) {
 
     const data = await response.json();
     localStorage.setItem('jwtToken', data.token);
-    window.location.href = '/questoes';
+    window.location.href = '/home';
   } catch (error) {
     showMessage(error.message);
   }

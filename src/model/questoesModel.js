@@ -1,4 +1,5 @@
 const pool = require('../config/database');
+
 async function listarTodas() {
 
   const result = await pool.query(`
@@ -43,7 +44,8 @@ async function buscarPorVestibular(vestibular) {
     WHERE nome ILIKE $1
   `, [`%${vestibular}%`]);
 
-    return result.rows;
+  return result.rows;
+
 }
 
 async function buscarPorAno(ano) {

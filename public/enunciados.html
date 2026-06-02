@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Questões</title>
+
+  <link rel="stylesheet" href="./enunciados.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+
+  <header class="topo">
+
+    <div class="logo">
+      <div>
+        <h2>Vestibular</h2>
+        <span>NA PRÁTICA</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="/home">Início</a>
+      <a href="/tematicas">Temáticas</a>
+      <a href="/enunciados">Questões</a>
+
+      <button id="logoutButton">
+        Sair
+      </button>
+    </nav>
+
+  </header>
+
+  <main class="conteudo">
+
+    <h1>Questões de Vestibular</h1>
+
+    <div class="form-row">
+
+      <p>Escolha a sua pesquisa: </p>
+<form action="/action_page.php">
+  <input type="radio" id="tema" name="fav_language" value="tema">
+  <label for="tema">Tema</label><br>
+  <input type="radio" id="ano" name="fav_language" value="ano">
+  <label for="ano">Ano</label><br>
+  <input type="radio" id="vestibular" name="fav_language" value="vestibular">
+  <label for="vestibular">Vestibular</label><br><br>
+  <input type="submit" value="Enviar">
+</form> 
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar tema, ano, vestibular..."
+      >
+
+      <button id="searchButton">
+        Buscar
+      </button>
+
+      <button id="refreshButton">
+        Atualizar
+      </button>
+
+    </div>
+
+    <div id="message"></div>
+
+    <table border="1">
+
+      <thead>
+
+        <tr>
+          <th>Tema</th>
+          <th>Vestibular</th>
+          <th>Ano</th>
+          <th>Pergunta</th>
+          <th>Resposta</th>
+          <th>Comentário</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="questionTable"></tbody>
+
+    </table>
+
+  </main>
+
+  <footer class="rodape">
+
+    <div class="footer-logo">
+
+      <h2>ENEM NA PRÁTICA</h2>
+
+      <p>
+        Estude Biologia de forma organizada e eficiente.
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <h3>Navegação</h3>
+
+      <a href="/home">Início</a>
+      <a href="/tematicas">Temáticas</a>
+      <a href="/enunciados">Questões</a>
+
+    </div>
+
+    <div class="footer-contato">
+
+      <h3>Contato</h3>
+
+      <p>suporte@enem.com</p>
+      <p>(19) 99999-9999</p>
+
+    </div>
+
+  </footer>
+
+  <script src="enunciados.js"></script>
+
+</body>
+</html>

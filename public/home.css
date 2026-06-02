@@ -1,78 +1,95 @@
-body {
+*{
   margin: 0;
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-  color: #1b5e20;
+  padding: 0;
+  box-sizing: border-box;
+} /*remoção de margens e espaçamentos padrões*/
+
+html,
+body{
+  height: 100%;
+}
+/*ocupação total da tela*/
+body{
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Organiza os elementos em formato de coluna */
+  font-family: Arial, sans-serif;
+  background:#205522;
+  color: #1b5e20; /* Define a cor padrão dos textos */
 }
 
-/* Centralização da home */
-.container {
-  height: 100vh;
+/* CONTEÚDO PRINCIPAL */
+
+.container{
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  /* efeito leve de “cartão” */
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(6px);
+  justify-content: center; 
+  align-items: center; /* Centraliza todo o conteúdo horizontalmente e verticalmente */
+  text-align: center; /* Centraliza os textos */
+  background: #f8f3e2; /*fundo do card maior*/
   margin: 40px;
+  padding: 60px 30px; /* Define espaçamentos externos e internos */
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Título */
-h1 {
+/*textos*/
+
+.container h1{
   font-size: 32px;
-  margin-bottom: 10px;
   color: #2e7d32;
+  margin-bottom: 15px;
 }
 
-/* Texto */
-p {
+.container p{
   font-size: 16px;
   color: #33691e;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-/* Botão estilo “natureza” */
-.botao {
-  background: #43a047;
+/*botões*/
+
+.botoes{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.botao{
+  background: #3c8340;
   color: white;
   padding: 14px 24px;
   text-decoration: none;
   border-radius: 30px;
   font-size: 16px;
   font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(67, 160, 71, 0.4);
 }
 
-/* Hover do botão */
-.botao:hover {
-  background: #2e7d32;
-  transform: scale(1.05);
-}
+@media (max-width: 768px){
 
-/* Efeito decorativo simples (bolhas tipo célula) */
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  background: rgba(76, 175, 80, 0.2);
-  border-radius: 50%;
-  z-index: -1;
-}
+  .container{
+    margin: 20px;
+    padding: 40px 20px;
+  }
 
-body::before {
-  top: 10%;
-  left: 5%;
-}
+  .container h1{
+    font-size: 28px;
+  }
 
-body::after {
-  bottom: 10%;
-  right: 5%;
+  .container p{
+    font-size: 15px;
+  }
+
+  .botoes{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodape{
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
 }

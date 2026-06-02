@@ -48,13 +48,13 @@ app.get('/home', (req, res) => {
 
 });
 
-app.get('/cadastro', (req, res) => {
+app.get('/enunciados', (req, res) => {
 
   res.sendFile(
     path.join(
       __dirname,
       'public',
-      'cadastro.html'
+      'enunciados.html'
     )
   );
 

@@ -19,4 +19,6 @@ function verificarToken(req, res, next) {
   }
 }
 
-module.exports
+module.exports = {
+  verificarToken
+};

@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ENEM na Prática</title>
+  <title>Vestibular na Prática</title>
 
   <link rel="stylesheet" href="tematicas.css">
 
@@ -31,15 +31,15 @@
       >
 
       <div>
-        <h2>ENEM</h2>
+        <h2>Vestibular</h2>
         <span>NA PRÁTICA</span>
       </div>
     </div>
 
     <nav class="menu">
-      <a href="inicio.html">Início</a>
-      <a href="meu-progresso.html">Meu progresso</a>
-      <a href="perfil.html">Perfil</a>
+      <a href="./home.html">Home</a>
+      <a href="./tematicas.html">Temáticas</a>
+      <a href="./enunciados.html">Questões</a>
     </nav>
 
   </header>
@@ -61,31 +61,31 @@
           >
         </div>
 
-        <h3>Fisiologia Humana</h3>
+        <h3><button>Fisiologia Humana</button></h3>
       </div>
 
       <!-- CARD 2 -->
       <div class="card" onclick="abrirTema('Genética e Biotecnologia')">
         <div class="circulo">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png"
+            src="https://cdn-icons-png.flaticon.com/512/4178/4178680.png"
             alt="Genética"
           >
         </div>
 
-        <h3>Genética e Biotecnologia</h3>
+        <h3><button id="GeneticaButton">Genética e Biotecnologia</button></h3>
       </div>
 
       <!-- CARD 3 -->
       <div class="card" onclick="abrirTema('Citologia')">
         <div class="circulo">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/3899/3899618.png"
+            src="https://cdn-icons-png.flaticon.com/256/10202/10202686.png"
             alt="Citologia"
           >
         </div>
 
-        <h3>Citologia</h3>
+        <h3><button id="searchButton">Citologia</button></h3>
       </div>
 
       <!-- CARD 4 -->
@@ -97,19 +97,19 @@
           >
         </div>
 
-        <h3>Metabolismo Energético</h3>
+        <h3><button id="searchButton">Metabolismo Energético</button></h3>
       </div>
 
       <!-- CARD 5 -->
       <div class="card" onclick="abrirTema('Evolução')">
         <div class="circulo">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/1998/1998610.png"
+            src="https://cdn-icons-png.flaticon.com/512/5660/5660272.png"
             alt="Evolução"
           >
         </div>
 
-        <h3>Evolução</h3>
+        <h3><button id="searchButton">Evolução</button></h3>
       </div>
 
       <!-- CARD 6 -->
@@ -121,7 +121,7 @@
           >
         </div>
 
-        <h3>Zoologia</h3>
+        <h3><button id="searchButton">Zoologia</button></h3>
       </div>
 
       <!-- CARD 7 -->
@@ -133,18 +133,42 @@
           >
         </div>
 
-        <h3>Botânica</h3>
+        <h3><button id="searchButton">Botânica</button></h3>
       </div>
 
       <!-- CARD 8 -->
       <div class="card" onclick="abrirTema('Microbiologia')">
         <div class="circulo">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/2784/2784459.png"
+            src="https://cdn-icons-png.flaticon.com/512/4178/4178690.png"
             alt="Microbiologia"
           >
         </div>
-        <h3>Microbiologia</h3>
+        <h3><button id="searchButton">Microbiologia</button></h3>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="card" onclick="abrirTema('Ecologia')">
+        <div class="circulo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4284/4284490.png"
+            alt="Ecologia"
+          >
+        </div>
+
+        <h3><button id="searchButton">Ecologia</button></h3>
+      </div>
+
+<!--CARD 10 -->
+      <div class="card" onclick="abrirTema('Bioquimica')">
+        <div class="circulo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/6166/6166904.png"
+            alt="Bioquimica"
+          >
+        </div>
+
+        <h3><button id="searchButton">Bioquimica</button></h3>
       </div>
 
     </section>
@@ -156,11 +180,11 @@
       <div class="logo">
         <img
           src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
-          alt="Logo ENEM"
+          alt="Logo"
         >
 
         <div>
-          <h2>ENEM</h2>
+          <h2>Vestibular</h2>
           <span>NA PRÁTICA</span>
         </div>
       </div>
@@ -178,36 +202,25 @@
 
       <a href="inicio.html">Início</a>
       <a href="tematicas.html">Temáticas</a>
-      <a href="meu-progresso.html">Meu progresso</a>
-      <a href="contato.html">Contato</a>
 
     </div>
 
     <div class="footer-contato">
 
-      <h3>Contato</h3>
-
       <p>
-        suporte@enemnapratica.com
+        © 2026 Vestibular na Prática
       </p>
 
       <p>
-        @enemnapratica
+        suporte@vestibularnapratica
       </p>
 
-      <p>
-        (19) 99999-9999
-      </p>
 
-    </div>
-
-    <div class="icons">
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-youtube"></i>
-      <i class="fa-brands fa-tiktok"></i>
     </div>
 
   </footer>
+
+ <script src="tematicas.js"></script>
 
 </body>
 

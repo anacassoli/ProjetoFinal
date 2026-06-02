@@ -1,24 +1,18 @@
-const pool = require('../config/database');
+const QuestoesModel = require('../models/questoesModel');
 
 async function listarTodas(req, res) {
 
   try {
 
-    const resultado = await pool.query(`
-      SELECT *
-      FROM BuscaTudo
-      ORDER BY num_qst
-    `);
+    const questoes =
+      await QuestoesModel.listarTodas();
 
-    res.status(200).json(
-      resultado.rows
-    );
+    res.status(200).json(questoes);
 
   } catch (erro) {
 
     res.status(500).json({
-      mensagem:
-      'Erro ao listar questões',
+      mensagem: 'Erro ao listar questões',
       erro: erro.message
     });
 
@@ -30,8 +24,7 @@ async function buscarPorId(req, res) {
 
   try {
 
-    const id =
-      parseInt(req.params.id);
+    const id = parseInt(req.params.id);
 
     if (isNaN(id)) {
 
@@ -41,33 +34,25 @@ async function buscarPorId(req, res) {
 
     }
 
-    const resultado =
-      await pool.query(`
-        SELECT *
-        FROM BuscaTudo
-        WHERE num_qst = $1
-      `, [id]);
+    const questao =
+      await QuestoesModel.buscarPorId(id);
 
-    if (
-      resultado.rows.length === 0
-    ) {
+    if (questao) {
 
-      return res.status(404).json({
-        mensagem:
-        'Questão não encontrada'
+      res.status(200).json(questao);
+
+    } else {
+
+      res.status(404).json({
+        mensagem: `Questão ${id} não encontrada`
       });
 
     }
 
-    res.status(200).json(
-      resultado.rows[0]
-    );
-
   } catch (erro) {
 
     res.status(500).json({
-      mensagem:
-      'Erro ao buscar questão',
+      mensagem: 'Erro ao buscar questão',
       erro: erro.message
     });
 
@@ -81,23 +66,15 @@ async function buscarPorTema(req, res) {
 
     const { tema } = req.params;
 
-    const resultado =
-      await pool.query(`
-        SELECT *
-        FROM BuscaTudo
-        WHERE LOWER(nome_tema)
-        LIKE LOWER($1)
-      `, [`%${tema}%`]);
+    const questoes =
+      await QuestoesModel.buscarPorTema(tema);
 
-    res.status(200).json(
-      resultado.rows
-    );
+    res.status(200).json(questoes);
 
   } catch (erro) {
 
     res.status(500).json({
-      mensagem:
-      'Erro ao buscar questões',
+      mensagem: 'Erro ao buscar questões por tema',
       erro: erro.message
     });
 
@@ -105,32 +82,23 @@ async function buscarPorTema(req, res) {
 
 }
 
-async function buscarPorVestibular(
-  req,
-  res
-) {
+async function buscarPorVestibular(req, res) {
 
   try {
 
-    const { vestibular } =
-      req.params;
+    const { vestibular } = req.params;
 
-    const resultado =
-      await pool.query(`
-        SELECT *
-        FROM BuscaTudo
-        WHERE nome ILIKE $1
-      `, [`%${vestibular}%`]);
+    const questoes =
+      await QuestoesModel.buscarPorVestibular(
+        vestibular
+      );
 
-    res.status(200).json(
-      resultado.rows
-    );
+    res.status(200).json(questoes);
 
   } catch (erro) {
 
     res.status(500).json({
-      mensagem:
-      'Erro ao buscar vestibular',
+      mensagem: 'Erro ao buscar vestibular',
       erro: erro.message
     });
 
@@ -138,37 +106,22 @@ async function buscarPorVestibular(
 
 }
 
-async function buscarPorAno(
-  req,
-  res
-) {
+async function buscarPorAno(req, res) {
 
   try {
 
     const { ano } = req.params;
 
-    const resultado =
-      await pool.query(`
+    const questoes =
+      await QuestoesModel.buscarPorAno(ano);
 
-        SELECT *
-        FROM BuscaTudo
-        WHERE ano_vest = $1
-
-      `, [ano]);
-
-    res.status(200).json(
-      resultado.rows
-    );
+    res.status(200).json(questoes);
 
   } catch (erro) {
 
     res.status(500).json({
-
-      mensagem:
-      'Erro ao buscar ano',
-
+      mensagem: 'Erro ao buscar ano',
       erro: erro.message
-
     });
 
   }
@@ -176,7 +129,6 @@ async function buscarPorAno(
 }
 
 module.exports = {
-
   listarTodas,
   buscarPorId,
   buscarPorTema,
