@@ -1,4 +1,4 @@
-const QuestoesModel = require('../models/questoesModel');
+const QuestoesModel = require('../model/questoesModel');
 
 async function listarTodas(req, res) {
 

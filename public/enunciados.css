@@ -20,7 +20,6 @@ body{
 
 .topo{
   width: 100%;
-  height: 90px;
   background: #1f7a37;
   display: flex;
   align-items: center;
@@ -28,54 +27,63 @@ body{
   padding: 15px 50px;
 }
 
+/* imagem e nome do sistema*/
 .logo{
-  display: flex;
+  display: flex; /*alinha na mesma linha*/
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: white;
 }
 
+/*tamanho da imagem usada*/
 .logo img{
   width: 55px;
   height: 55px;
 }
 
-.logo h2{
+.logo h2{ /*text da logo*/
   font-size: 22px;
   line-height: 1;
 }
 
-.logo span{
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.menu{
+.menu{ /*coloca os links na horizontal*/
   display: flex;
+  align-items: center;
   gap: 30px;
 }
 
-.menu a{
+.menu a{ /*cor e tira o sublinhado dos links*/
   text-decoration: none;
   color: white;
   font-weight: 500;
 }
 
+.menu a:hover{
+  text-decoration: underline;
+}
+
 .menu button{
-  background: white;
+  background: #b9dfc8;
   color: #1f7a37;
   border: none;
   border-radius: 8px;
-  padding: 8px 18px;
+  padding: 5px 5px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: bold;
 }
+
+.menu button:hover{
+  background: #4fa36b;
+  color: white;
+}
+
 
 /* CONTEÚDO DAS QUESTÕES */
 
 .conteudo{
+  text-align: center;
   flex: 1;
-  background: linear-gradient(to bottom, #006633, #004d26);
+  background: #104d20;
   padding: 40px 20px;
   color: white;
 }
@@ -83,7 +91,38 @@ body{
 .conteudo h1{
   text-align: center;
   font-size: 42px;
-  margin-bottom: 20px;
+}
+
+.conteudo p{
+  text-align: center;
+  font-size: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.conteudo button{
+  text-align: center;
+  background: #b9dfc8;
+  color: #1f7a37;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.conteudo button:hover{
+  background: #4fa36b;
+  color: white;
+}
+
+.conteudo input{
+  width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .questao{
@@ -104,23 +143,62 @@ body{
 }
 
 
+.temas{
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 por linha */
+  gap: 25px;
+  justify-items: center;
+}
+
+.card{
+  width: 160px; /* menor */
+  text-align: center;
+}
+
+.circulo{
+  width: 110px;   /* menor */
+  height: 110px;  /* menor */
+  background: #b9dfc8;
+  border: 5px solid #4fa36b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+}
+
+.circulo img{
+  width: 60px;   /* menor */
+  height: 60px;  /* menor */
+  object-fit: contain;
+}
+
+.card h3{
+  font-size: 16px; /* menor texto */
+  color: white;
+  font-weight: 500;
+}
+
+
 /* FOOTER (IGUAL AO OUTRO SITE) */
 
 .rodape{
+  align-items: center;
   background: #1f7a37;
-
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-
   padding: 40px 30px;
-
   color: white;
 }
 
 .footer-links,
 .footer-contato,
-.footer-redes{
+.footer-redes,
+.footer-logo{
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -131,6 +209,10 @@ body{
   color: white;
 }
 
+.footer-links a:hover{
+  text-decoration: underline;
+}
+
 .icons{
   display: flex;
   gap: 15px;
@@ -138,28 +220,10 @@ body{
 }
 
 .footer-logo p{
-  margin-top: 10px;
-}
-
-/* RESPONSIVO */
-
-@media(max-width: 900px){
-
-  .topo{
-    flex-direction: column;
-    height: auto;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .menu{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .questao{
-    width: 90%;
-  }
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .form-row{
@@ -218,4 +282,64 @@ tr:nth-child(even){
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
+}
+
+@media (max-width: 900px){
+
+  .topo{
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .menu{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .conteudo h1{
+    font-size: 32px;
+  }
+
+  .conteudo p{
+    font-size: 16px;
+  }
+
+  .temas{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card{
+    width: 140px;
+  }
+
+  .circulo{
+    width: 90px;
+    height: 90px;
+  }
+
+  .circulo img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .questao{
+    width: 95%;
+  }
+
+  .form-row{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table{
+    display: block;
+    overflow-x: auto;
+  }
+
+  .rodape{
+    text-align: center;
+    justify-content: center;
+  }
 }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Questões por Ano</title>
+
+  <link rel="stylesheet" href="enunciados.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+   <header class="topo">
+
+    <div class="logo">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+        alt="Logo ENEM"
+      >
+
+      <div>
+        <h2>Vestibular</h2>
+        <span>NA PRÁTICA</span>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="./home.html">Voltar</a>
+      <a href="./tema.html">Questões por tema</a>
+      <a href="./vestibular.html">Questões por vestibular</a>
+      <a href="./ano.html">Questões por ano</a>
+
+      <button id="logoutButton">
+        Sair
+      </button>
+    </nav>
+
+  </header>
+
+  <main class="conteudo">
+
+    <h1>Questões por Ano</h1>
+
+    <div class="form-row">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Buscar ano..."
+      >
+
+      <button id="searchButton">
+        Buscar
+      </button>
+
+      <button id="refreshButton">
+        Atualizar
+      </button>
+
+    </div>
+
+    <div id="message"></div>
+
+    <table border="1">
+
+      <thead>
+
+        <tr>
+          <th>Tema</th>
+          <th>Vestibular</th>
+          <th>Ano</th>
+          <th>Pergunta</th>
+          <th>Resposta</th>
+          <th>Comentário</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="questionTable"></tbody>
+
+    </table>
+
+  </main>
+
+  <footer class="rodape">
+   <div class="footer-logo">
+
+      <div class="logo">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
+          alt="Logo"
+        >
+
+        <div>
+          <h2>Vestibular</h2>
+          <span>NA PRÁTICA</span>
+        </div>
+      </div>
+
+      <p>
+        Estude de forma simples <br>
+        e eficiente para o ENEM e outros vestibulares!
+      </p>
+
+    </div>
+
+    <div class="footer-links">
+
+      <h3>Navegação</h3>
+
+      <a href="./tema.html">Questões por tema</a>
+      <a href="./vestibular.html">Questões por vestibular</a>
+      <a href="./ano.html">Questões por ano</a>
+
+    </div>
+
+
+  </footer>
+
+  <script src="ano.js"></script>
+
+</body>
+</html>

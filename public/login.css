@@ -13,7 +13,7 @@ body {
 
 body {
   height: 100%;  /* Garante que o conteúdo da página tenha no mínimo a altura total da tela */
-  background-color: #e8f5e9;
+  background-color: #548458;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,7 @@ body {
 header {
   text-align: center;
   margin-bottom: 20px;
-  color: #1b5e20;
+  color: #ffffff;
 } /* Centraliza os textos do cabeçalho e adiciona um espaçamento embaixo */
 
 header h1 {
@@ -35,7 +35,7 @@ header h1 {
 
 header p {
   font-size: 14px;
-  color: #2e7d32;
+  color: #ffffff;
 }
 
 /* MAIN CENTRALIZA SÓ O CARD */
@@ -52,7 +52,6 @@ main {
   background: white;
   padding: 30px;
   border-radius: 12px;
-  border: 2px solid #81c784;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 } /* Cria um cartão branco com bordas arredondadas e sombra para destacar o formulário */
 
@@ -78,7 +77,7 @@ main {
  
 .form-row input {
   padding: 12px;
-  border: 1px solid #a5d6a7;
+  border: 1px solid #619563;
   border-radius: 8px;
   font-size: 14px;
 }

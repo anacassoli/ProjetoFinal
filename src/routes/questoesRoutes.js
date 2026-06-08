@@ -13,7 +13,6 @@ router.get('/buscar/tema/:tema',
   QuestoesController.buscarPorTema
 );
 
-
 router.get('/buscar/ano/:ano',
   QuestoesController.buscarPorAno
 );
