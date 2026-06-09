@@ -1,95 +1,105 @@
+/* Remove margens e espaçamentos padrão de todos os elementos */
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-} /*remoção de margens e espaçamentos padrões*/
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
 
+/* Define altura total para HTML e BODY */
 html,
 body{
   height: 100%;
 }
-/*ocupação total da tela*/
+
+/* Ocupação total da tela */
 body{
   height: 100%;
   display: flex;
   flex-direction: column; /* Organiza os elementos em formato de coluna */
-  font-family: Arial, sans-serif;
-  background:#205522;
-  color: #1b5e20; /* Define a cor padrão dos textos */
+  font-family: Arial, sans-serif; /* Fonte padrão da página */
+  background:#205522; /* Cor de fundo da página */
+  color: #1b5e20; /* Cor padrão dos textos */
 }
 
 /* CONTEÚDO PRINCIPAL */
 
 .container{
-  flex: 1;
+  flex: 1; /* Ocupa o espaço disponível */
   display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; /* Centraliza todo o conteúdo horizontalmente e verticalmente */
+  flex-direction: column; /* Organiza os elementos em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
   text-align: center; /* Centraliza os textos */
-  background: #f8f3e2; /*fundo do card maior*/
-  margin: 40px;
-  padding: 60px 30px; /* Define espaçamentos externos e internos */
-  border-radius: 20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+
+  /* Aplica imagem de fundo com camada transparente por cima */
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.33),
+      rgba(255, 255, 255, 0.236)
+    ),
+    url('https://images.vexels.com/media/users/3/315263/raw/ca83aec633aca5b3845da0aaa3c6822e-fundo-infantil-de-animais-fofos.jpg');
+
+  background-size: cover; /* Faz a imagem ocupar todo o card */
+
+  margin: 40px; /* Espaçamento externo */
+  padding: 60px 30px; /* Espaçamento interno */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow:0 10px 25px rgba(0,0,0,0.1); /* Sombra do card */
 }
 
-/*textos*/
+/* TEXTOS */
 
 .container h1{
-  font-size: 32px;
-  color: #2e7d32;
-  margin-bottom: 15px;
+  font-size: 32px; /* Tamanho do título */
+  color: #2e7d32; /* Cor do título */
+  margin-bottom: 15px; /* Espaço abaixo */
 }
 
 .container p{
-  font-size: 16px;
-  color: #33691e;
-  margin-bottom: 30px;
+  font-size: 16px; /* Tamanho do texto */
+  color: #33691e; /* Cor do texto */
+  margin-bottom: 30px; /* Espaço abaixo */
 }
 
-/*botões*/
+/* BOTÕES */
 
 .botoes{
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex; /* Coloca os botões lado a lado */
+  gap: 15px; /* Espaço entre os botões */
+  flex-wrap: wrap; /* Permite quebrar linha se necessário */
+  justify-content: center; /* Centraliza os botões */
 }
 
 .botao{
-  background: #3c8340;
-  color: white;
-  padding: 14px 24px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
+  background: #3c8340; /* Cor de fundo do botão */
+  color: white; /* Cor do texto */
+  padding: 14px 24px; /* Espaçamento interno */
+  text-decoration: none; /* Remove sublinhado */
+  border-radius: 30px; /* Bordas arredondadas */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
 }
+
+/* RESPONSIVIDADE */
 
 @media (max-width: 768px){
 
   .container{
-    margin: 20px;
+    margin: 20px; 
     padding: 40px 20px;
   }
-
   .container h1{
-    font-size: 28px;
+    font-size: 28px; 
   }
-
   .container p{
     font-size: 15px;
   }
-
   .botoes{
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; 
+    align-items: center; 
   }
-
   .rodape{
     justify-content: center;
-    text-align: center;
+    text-align: center; 
     padding: 30px 20px;
   }
 }

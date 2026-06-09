@@ -1,106 +1,113 @@
+/* Remove margens e espaçamentos padrão de todos os elementos */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box; /* Inclui bordas e padding no tamanho total */
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
 }
-/*remoção de margens e espaçamentos automáticos*/
 
+/* Define que HTML e BODY ocupem toda a altura da tela */
 html,
 body {
   height: 100%;
-} /* Define que o HTML e o body ocupem toda a altura da janela do navegador */
+}
 
+/* Configuração geral da página */
 body {
-  height: 100%;  /* Garante que o conteúdo da página tenha no mínimo a altura total da tela */
-  background-color: #548458;
+  height: 100%; /* Garante altura total da tela */
+  background-color: #548458; /* Cor de fundo verde */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  flex-direction: column; /* Organiza os elementos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 20px; /* Espaçamento interno */
 }
 
 /* HEADER (TÍTULO EM CIMA) */
 header {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #ffffff;
-} /* Centraliza os textos do cabeçalho e adiciona um espaçamento embaixo */
-
-header h1 {
-  font-size: 32px;
-  margin-bottom: 5px;
-} /* Define o tamanho do título principal e um pequeno espaçamento inferior */
-
-header p {
-  font-size: 14px;
-  color: #ffffff;
+  text-align: center; /* Centraliza os textos */
+  margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+  color: #ffffff; /* Cor branca */
 }
 
-/* MAIN CENTRALIZA SÓ O CARD */
+/* Título principal */
+header h1 {
+  font-size: 32px; /* Tamanho da fonte */
+  margin-bottom: 5px; /* Espaço abaixo */
+}
+
+/* Subtítulo */
+header p {
+  font-size: 14px; /* Tamanho da fonte */
+  color: #ffffff; /* Cor branca */
+}
+
+/* MAIN CENTRALIZA APENAS O CARD */
 main {
-  width: 100%;
+  width: 100%; /* Ocupa toda a largura disponível */
   display: flex;
-  justify-content: center;
-} /*deixa o painel de login na horizontal*/
+  justify-content: center; /* Centraliza o card horizontalmente */
+}
 
-/* CARD */
+/* CARD DE LOGIN */
 .panel {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-} /* Cria um cartão branco com bordas arredondadas e sombra para destacar o formulário */
+  width: 100%; /* Largura total disponível */
+  max-width: 400px; /* Limita a largura máxima */
+  background: white; /* Fundo branco */
+  padding: 30px; /* Espaçamento interno */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra do card */
+}
 
-/* LOGIN TITLE */
+/* TÍTULO DO LOGIN */
 .login-panel h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #2e7d32;
-} /* Centraliza e estiliza o título da área de login */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaço abaixo */
+  color: #2e7d32; /* Cor verde */
+}
 
-/* CAMPOS */
+/* CAMPOS DO FORMULÁRIO */
 .form-row {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-} /* Organiza cada campo do formulário em formato de coluna */
+  flex-direction: column; /* Organiza label e input em coluna */
+  margin-bottom: 15px; /* Espaço entre os campos */
+}
 
+/* Nome dos campos */
 .form-row label {
-  margin-bottom: 5px;
-  color: #1b5e20;
-  font-weight: bold;
-} /* Destaca os nomes dos campos usando negrito */
- 
+  margin-bottom: 5px; /* Espaço abaixo do label */
+  color: #1b5e20; /* Cor verde escura */
+  font-weight: bold; /* Texto em negrito */
+}
+
+/* Campos de entrada */
 .form-row input {
-  padding: 12px;
-  border: 1px solid #619563;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 12px; /* Espaçamento interno */
+  border: 1px solid #619563; /* Borda verde */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho da fonte */
 }
 
-/* BOTÃO */
+/* BOTÃO DE LOGIN */
 .button-row button {
-  width: 100%;
-  padding: 12px;
-  background-color: #43a047;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-} /* Configura o botão principal do formulário */
-
-.button-row button:hover {
-  background-color: #2e7d32;
+  width: 100%; /* Ocupa toda a largura do card */
+  padding: 12px; /* Espaçamento interno */
+  background-color: #43a047; /* Cor verde */
+  color: white; /* Texto branco */
+  border: none; /* Remove a borda */
+  border-radius: 8px; /* Bordas arredondadas */
+  font-size: 15px; /* Tamanho da fonte */
+  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
 }
 
-/* ERRO */
+/* Efeito ao passar o mouse no botão */
+.button-row button:hover {
+  background-color: #2e7d32; /* Verde mais escuro */
+}
+
+/* ÁREA DE MENSAGENS */
 .message {
-  text-align: center;
-  color: red;
-  margin-bottom: 15px;
-} /* Área destinada à exibição de mensagens de erro ou aviso */
+  text-align: center; /* Centraliza o texto */
+  color: red; /* Cor vermelha para erros */
+  margin-bottom: 15px; /* Espaço abaixo */
+}
